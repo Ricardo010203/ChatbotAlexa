@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-md-center" style="background-color: #ccccff">
+                <div class="card" style="width: 18rem;">
+                    <img src="/img/Logo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <form action="/auth" method="post">
+                            <div class="mb-3">
+                                <label for="Login" class="form-label">Login:</label>
+                                <input type="text" name="cuenta" class="form-control" id="cuenta" required="" placeholder="Usuario" autofocus >
+                            <div class="mb-3">
+                                <label for="paswword" class="form-label">Contraseña:</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Contraseña" required="">
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary">Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.6.0.min"></script>
+        <script src="js/bootstrap.min"></script>      
+    </body>
+</html>

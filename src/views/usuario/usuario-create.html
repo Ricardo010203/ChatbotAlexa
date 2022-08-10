@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Difusion</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbar-bottom/">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<script type="text/javascript">
+  function ci(photo)
+   {
+    $("#argazki").attr("src","https://acortar.link/BiR6gn")
+    $.ajax({
+        async: true,
+        type: 'POST',
+        url: 'create-qr',
+        data: {},
+       // timeout:3000,
+        success: function (data) {
+            //console.log(data);
+            //alert(data)
+            $("#argazki").attr("src",data)
+        },
+        error: function (request, status, error) {
+          //alert(status)
+        //    alert(jQuery.parseJSON(request.responseText).Message);
+        }
+    });
+    /*var img=document.getElementById(photo);
+    img.src="";
+    img.src="img/qr.jpg?"+Date();*/
+    
+   }
+   function redirect()
+    {
+   
+    window.location.href="https://docs.google.com/spreadsheets/d/15lLJBYCqYIMuCSHRFu2vgLRrmirn9ZuVMWF2zrlSy40/edit?usp=sharing";
+    }
+ </script>
+  </head>
+  <body>
+  
+<main class="container">
+  <div class="bg-light p-5 rounded mt-3">
+    <button type="button" class="p-2 pull-right border" style="float: right;"> <img src="img/logoSheet.png" height ="60" width="80" onClick="redirect()"/></button>
+    <h1>Iniciar Difusión</h1>
+    <form action="" id="formulario" class="formulario">
+    <p class="lead">Presiona el botón para iniciar una nueva difusión.</p>
+    <input type="button" class="btn btn-info btn-lg btn-bd-primary" name="difusiones" value="Iniciar" onclick="location.reload()"/>
+    <div class="p-2 justify-content-center align-items-center text-center border">
+      <h2>¡ATENCIÓN!</h2>
+      <p class="lead">Después de presionar el botón para iniciar la difusión, espera al rededor de 5 segundos para actualizar el código QR.</p>
+      <img id="argazki" src="{{src}}" alt="verificador" width="375px" height="375px"/>
+      <input type="button" class="btn btn-info btn-lg btn-bd-primary" name="regarga" value="Recargar QR" onClick="ci('argazki')" />
+    </div>
+    </form>
+  </div>
+</main>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src='js/funciones.js'></script>
+  <script src='/src/controllers/QrController.js'></script>
+  </body>
+</html>
