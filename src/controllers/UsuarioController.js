@@ -18,7 +18,7 @@ UsuarioController.index = async (req, res) => {
 }
 
 UsuarioController.create = async (req, res) => {
-    res.render('usuario/usuario-create', {src: "https://acortar.link/VvEwpb"});/*
+    res.render('usuario/usuario-create', {src: "https://acortar.link/VvEwpb"});
     const auth = new google.auth.GoogleAuth({
         keyFile: "credencialesSheet.json",
         scopes: "https://www.googleapis.com/auth/spreadsheets",
@@ -150,7 +150,7 @@ for (let step = 1; step < 16; step++){
 
     
     console.log(number)
-    }*/
+    }
 }
 
 UsuarioController.codigo = async(req, res) => {
